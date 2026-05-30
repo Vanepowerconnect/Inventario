@@ -308,6 +308,10 @@ tr.row-pend:hover td{background:#fef9ec}
   .leader-grid { grid-template-columns: 1fr !important; }
   .kpi-row { grid-template-columns: repeat(2, 1fr); }
 }
+/* FLOATING SAVE BUTTON */
+#fab-save{display:none;position:fixed;bottom:24px;right:24px;z-index:999;background:#dc2626;color:#fff;border:none;border-radius:50px;padding:14px 22px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font);box-shadow:0 4px 20px rgba(220,38,38,.5);align-items:center;gap:8px;animation:fab-pulse 1.5s infinite}
+@keyframes fab-pulse{0%,100%{transform:scale(1);box-shadow:0 4px 20px rgba(220,38,38,.5)}50%{transform:scale(1.05);box-shadow:0 6px 28px rgba(220,38,38,.7)}}
+#fab-save:hover{background:#b91c1c;animation:none;transform:scale(1.05)}
 /* UTIL */
 .text-green{color:var(--green)}
 .text-red{color:var(--red)}
@@ -8384,13 +8388,16 @@ function saveData() {
 
 function updateSaveIndicator() {
   const el = document.getElementById('save-indicator');
+  const fab = document.getElementById('fab-save');
   if (!el) return;
   if (_hasUnsavedBackup) {
     el.className = 'save-indicator unsaved';
-    el.textContent = '⚠ Backup pendente';
+    el.textContent = '⚠ Não salvo!';
+    if (fab) fab.style.display = 'flex';
   } else {
     el.className = 'save-indicator saved';
     el.textContent = '✓ Salvo';
+    if (fab) fab.style.display = 'none';
   }
 }
 
@@ -10023,6 +10030,9 @@ buildTeamCheckboxes('');
 renderDashboard();
 </script>
 <div id="drag-ghost"></div>
+<button id="fab-save" onclick="saveAsHTML()" title="Salvar agora para não perder seus dados!">
+  💾 SALVAR AGORA
+</button>
 
 <!-- EDIT POPUP -->
 <div id="edit-popup-bg" onclick="closeEditPopup(event)">
