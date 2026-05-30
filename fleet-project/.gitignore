@@ -1,0 +1,7 @@
+# Backups locais
+*_backup_*.json
+*.bak
+
+# Sistema
+.DS_Store
+Thumbs.db
