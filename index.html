@@ -357,11 +357,11 @@ tr.row-pend:hover td{background:#fef9ec}
     Pessoas
   </div>
   <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
-    <span id="save-indicator" class="save-indicator saved">✓ Salvo</span>
-    <button class="nav-backup-btn" onclick="exportBackup()" title="Exportar backup dos dados">
+    <span id="save-indicator" class="save-indicator unsaved">⚠ Não salvo!</span>
+    <button class="nav-backup-btn" onclick="exportBackup()" title="Exportar backup dos dados" fdprocessedid="o2toho">
       ⬇ Backup JSON
     </button>
-    <button class="nav-backup-btn" onclick="saveAsHTML()" title="Salvar app completo com seus dados" style="background:var(--green2);border-color:var(--green);color:var(--green);font-weight:600">
+    <button class="nav-backup-btn" onclick="saveAsHTML()" title="Salvar app completo com seus dados" style="background:var(--green2);border-color:var(--green);color:var(--green);font-weight:600" fdprocessedid="r5wik4">
       💾 Salvar HTML
     </button>
     <label class="nav-backup-btn" title="Importar backup" style="cursor:pointer;margin:0">
@@ -556,9 +556,9 @@ tr.row-pend:hover td{background:#fef9ec}
   <div class="tbl-wrap">
     <div class="tbl-header" style="flex-wrap:wrap;gap:8px">
       <input type="text" id="asset-search" placeholder="Buscar por código, placa, modelo, equipe..." oninput="renderAssets()" style="min-width:200px">
-      <select id="asset-type-filter" onchange="renderAssets()"><option value="">Todos os tipos</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option></select>
-      <select id="asset-leader-filter" onchange="renderAssets()"><option value="">Todos os supervisores</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Deneer Ostaiza da Silva">Deneer Ostaiza da Silva</option><option value="Drivers">Drivers</option><option value="Felipe Resende">Felipe Resende</option><option value="Gustavo Martinez">Gustavo Martinez</option><option value="Joao Felipe Donato de Souza">Joao Felipe Donato de Souza</option><option value="João Felipe Donato de Sousa">João Felipe Donato de Sousa</option><option value="Pendente">Pendente</option><option value="Renato Fusari">Renato Fusari</option><option value="Wagner Lenlei Jr">Wagner Lenlei Jr</option><option value="Walter Vecchi">Walter Vecchi</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Deneer Ostaiza da Silva">Deneer Ostaiza da Silva</option><option value="Drivers">Drivers</option><option value="Felipe Resende">Felipe Resende</option><option value="Gustavo Martinez">Gustavo Martinez</option><option value="Joao Felipe Donato de Souza">Joao Felipe Donato de Souza</option><option value="João Felipe Donato de Sousa">João Felipe Donato de Sousa</option><option value="Pendente">Pendente</option><option value="Renato Fusari">Renato Fusari</option><option value="Wagner Lenlei Jr">Wagner Lenlei Jr</option><option value="Walter Vecchi">Walter Vecchi</option></select>
-      <select id="asset-state-filter" onchange="renderAssets()"><option value="">Todos os estados</option><option value="FL">FL</option><option value="MN">MN</option><option value="NY">NY</option><option value="OH">OH</option><option value="SC">SC</option><option value="WI">WI</option><option value="FL">FL</option><option value="MN">MN</option><option value="NY">NY</option><option value="OH">OH</option><option value="SC">SC</option><option value="WI">WI</option></select>
+      <select id="asset-type-filter" onchange="renderAssets()"><option value="">Todos os tipos</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option></select>
+      <select id="asset-leader-filter" onchange="renderAssets()"><option value="">Todos os supervisores</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Deneer Ostaiza da Silva">Deneer Ostaiza da Silva</option><option value="Drivers">Drivers</option><option value="Felipe Resende">Felipe Resende</option><option value="Gustavo Martinez">Gustavo Martinez</option><option value="Joao Felipe Donato de Souza">Joao Felipe Donato de Souza</option><option value="João Felipe Donato de Sousa">João Felipe Donato de Sousa</option><option value="Pendente">Pendente</option><option value="Renato Fusari">Renato Fusari</option><option value="Wagner Lenlei Jr">Wagner Lenlei Jr</option><option value="Walter Vecchi">Walter Vecchi</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Deneer Ostaiza da Silva">Deneer Ostaiza da Silva</option><option value="Drivers">Drivers</option><option value="Felipe Resende">Felipe Resende</option><option value="Gustavo Martinez">Gustavo Martinez</option><option value="Joao Felipe Donato de Souza">Joao Felipe Donato de Souza</option><option value="João Felipe Donato de Sousa">João Felipe Donato de Sousa</option><option value="Pendente">Pendente</option><option value="Renato Fusari">Renato Fusari</option><option value="Wagner Lenlei Jr">Wagner Lenlei Jr</option><option value="Walter Vecchi">Walter Vecchi</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Deneer Ostaiza da Silva">Deneer Ostaiza da Silva</option><option value="Drivers">Drivers</option><option value="Felipe Resende">Felipe Resende</option><option value="Gustavo Martinez">Gustavo Martinez</option><option value="Joao Felipe Donato de Souza">Joao Felipe Donato de Souza</option><option value="João Felipe Donato de Sousa">João Felipe Donato de Sousa</option><option value="Pendente">Pendente</option><option value="Renato Fusari">Renato Fusari</option><option value="Wagner Lenlei Jr">Wagner Lenlei Jr</option><option value="Walter Vecchi">Walter Vecchi</option></select>
+      <select id="asset-state-filter" onchange="renderAssets()"><option value="">Todos os estados</option><option value="FL">FL</option><option value="MN">MN</option><option value="NY">NY</option><option value="OH">OH</option><option value="SC">SC</option><option value="WI">WI</option><option value="FL">FL</option><option value="MN">MN</option><option value="NY">NY</option><option value="OH">OH</option><option value="SC">SC</option><option value="WI">WI</option><option value="FL">FL</option><option value="MN">MN</option><option value="NY">NY</option><option value="OH">OH</option><option value="SC">SC</option><option value="WI">WI</option></select>
       <div class="status-filters">
         <button class="sf-btn active-all" id="sf-all" onclick="setStatusFilter('')">Todos</button>
         <button class="sf-btn" id="sf-ok" onclick="setStatusFilter('ok')">✅ Em Dia</button>
@@ -581,7 +581,7 @@ tr.row-pend:hover td{background:#fef9ec}
   <div class="tbl-wrap">
     <div class="tbl-header">
       <input type="text" id="inv-search" placeholder="Buscar inventário..." oninput="renderInventory()">
-      <select id="inv-type-filter" onchange="renderInventory()"><option value="">Todos os tipos</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option></select>
+      <select id="inv-type-filter" onchange="renderInventory()"><option value="">Todos os tipos</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option><option value="CHRY">CHRY</option><option value="COMPRESSOR">COMPRESSOR</option><option value="DITCH WITCH">DITCH WITCH</option><option value="ESCAVATOR">ESCAVATOR</option><option value="EXCAVATOR">EXCAVATOR</option><option value="FORKLIFT">FORKLIFT</option><option value="FORTLIFT">FORTLIFT</option><option value="GPRS">GPRS</option><option value="LOCATOR">LOCATOR</option><option value="TRAILER">TRAILER</option><option value="TRUCK">TRUCK</option><option value="UTILITY LOCATOR">UTILITY LOCATOR</option><option value="VACUUM">VACUUM</option><option value="VERMEER">VERMEER</option></select>
       <select id="inv-alert-filter" onchange="renderInventory()">
         <option value="">Todos</option>
         <option value="verizon">Verizon s/ bateria</option>
@@ -602,12 +602,540 @@ tr.row-pend:hover td{background:#fef9ec}
   <div class="tbl-wrap">
     <div class="tbl-header">
       <input type="text" id="hist-search" placeholder="Buscar por código, equipe..." oninput="renderHistory()">
-      <span class="count" id="hist-count"></span>
+      <span class="count" id="hist-count">66 registros</span>
       <button class="icon-btn" onclick="openNewHistory()">+ Nova movimentação</button>
     </div>
     <table>
       <thead><tr><th>Código</th><th>De</th><th>Para</th><th>Data</th><th>Observações</th></tr></thead>
-      <tbody id="hist-tbody"></tbody>
+      <tbody id="hist-tbody">
+    <tr>
+      <td>VAC-003</td>
+      <td>Jose Silva</td>
+      <td>Felipe Resende</td>
+      <td>6/1/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>VAC-006</td>
+      <td>Allan 1</td>
+      <td>Apopka</td>
+      <td>05/17/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRP-034</td>
+      <td>Apopka</td>
+      <td>Allan 1</td>
+      <td>05/18/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-017</td>
+      <td>Apopka</td>
+      <td>Joao Felipe Donato</td>
+      <td>05/18/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-022</td>
+      <td>Felipe Donato</td>
+      <td>Apopka</td>
+      <td>05/18/2026</td>
+      <td style="font-size:11px;color:var(--text3)">Sem ar e sem freio</td>
+    </tr>
+  
+    <tr>
+      <td>RTD-022</td>
+      <td>Yard</td>
+      <td>Tadeu</td>
+      <td>05/13/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-026</td>
+      <td>Yard</td>
+      <td>Tadeu</td>
+      <td>05/13/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>RTD-026</td>
+      <td>Yard</td>
+      <td>Tadeu</td>
+      <td>05/13/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>LOC-016</td>
+      <td>Yard</td>
+      <td>Tadeu</td>
+      <td>05/13/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRM-019</td>
+      <td>Oh</td>
+      <td>Tadeu</td>
+      <td>05/13/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>VER-013</td>
+      <td>Oh</td>
+      <td>Tadeu</td>
+      <td>05/13/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-020</td>
+      <td>Manrick</td>
+      <td>Jose Saturnino</td>
+      <td>05/08/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-020</td>
+      <td>Manrick</td>
+      <td>Wladimir</td>
+      <td>04/21/2026</td>
+      <td style="font-size:11px;color:var(--text3)">Wladimir comprou Truck Propria</td>
+    </tr>
+  
+    <tr>
+      <td>TRP-036</td>
+      <td>Yard</td>
+      <td>Robert</td>
+      <td>05/11/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>CMP-007</td>
+      <td>Yard SC</td>
+      <td>Yovani</td>
+      <td>04/24/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-040</td>
+      <td>Felipe Resende</td>
+      <td>Jose Rose</td>
+      <td>04/25/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-026</td>
+      <td>Apopka</td>
+      <td>Felipe Resende</td>
+      <td>04/25/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRM-020</td>
+      <td>Apopka</td>
+      <td>Jonh</td>
+      <td>04/25/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>VER-005</td>
+      <td>Apopka</td>
+      <td>Jonh</td>
+      <td>04/25/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-023</td>
+      <td>Jose Rose</td>
+      <td>Denner</td>
+      <td>04/25/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>CMP-008</td>
+      <td>Yovani</td>
+      <td>Apopka</td>
+      <td>04/26/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRP-020</td>
+      <td>Apopka</td>
+      <td>Walter</td>
+      <td>04/26/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-027</td>
+      <td>Denner</td>
+      <td>Adilson</td>
+      <td>04/27/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>LOC-013</td>
+      <td>Apopka</td>
+      <td>Robert</td>
+      <td>04/27/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-041</td>
+      <td>Apopka</td>
+      <td>Apopka</td>
+      <td>04/28/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>RTD-032</td>
+      <td>Apopka</td>
+      <td>Fernando</td>
+      <td>04/28/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>RTD-022</td>
+      <td>Apopka</td>
+      <td>Apolinario</td>
+      <td>04/28/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>GPR-003</td>
+      <td>Allan1</td>
+      <td>Luis Castro</td>
+      <td>04/30/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>GPR-003</td>
+      <td>Allan</td>
+      <td>Apopka</td>
+      <td>05/01/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>RTD-026</td>
+      <td>Jonh</td>
+      <td>Apopka</td>
+      <td>05/02/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-021</td>
+      <td>Allan</td>
+      <td>Apopka</td>
+      <td>05/02/2026</td>
+      <td style="font-size:11px;color:var(--text3)">trocou pois  truck esta com problema de oleo</td>
+    </tr>
+  
+    <tr>
+      <td>TRP-029</td>
+      <td>Michigan</td>
+      <td>Walter WI</td>
+      <td>05/02/2026</td>
+      <td style="font-size:11px;color:var(--text3)">Esqueceram em michigan, vao buscar</td>
+    </tr>
+  
+    <tr>
+      <td>TRM-024</td>
+      <td>Jose Rose</td>
+      <td>Jose Rose</td>
+      <td>05/02/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>RTD-017</td>
+      <td>Apopka</td>
+      <td>Luis Castro</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)">ESTAVA EM APOPKA VEIO DE OH</td>
+    </tr>
+  
+    <tr>
+      <td>TRK-016</td>
+      <td>Luis Castro</td>
+      <td>Apopka</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)">Bateram na Yard e trocamos</td>
+    </tr>
+  
+    <tr>
+      <td>LOC-004</td>
+      <td>Felipe Donato</td>
+      <td>Luis Castro</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-016</td>
+      <td>Felipe Donato</td>
+      <td>Luis Castro</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-002</td>
+      <td>Felipe Donato</td>
+      <td>Luis Castro</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRP-019</td>
+      <td>Felipe Donato</td>
+      <td>Luis Castro</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRM-025</td>
+      <td>Felipe Donato</td>
+      <td>Luis Castro</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>VER-002</td>
+      <td>Felipe Donato</td>
+      <td>Luis Castro</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-007</td>
+      <td>Marcelo Baratela</td>
+      <td>Apopka</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)">Motorista dormiu e bateu em 05/04</td>
+    </tr>
+  
+    <tr>
+      <td>VAC-006</td>
+      <td>Jonh</td>
+      <td>Apopka</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>GPR-001</td>
+      <td>Jonh</td>
+      <td>Apopka</td>
+      <td>05/04/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRP-032</td>
+      <td>Allan</td>
+      <td>Robert</td>
+      <td>05/05/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-031</td>
+      <td>Jonh</td>
+      <td>Robert</td>
+      <td>05/05/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRM-029</td>
+      <td>Jonh</td>
+      <td>Apopka</td>
+      <td>05/05/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>RTD-032</td>
+      <td>Apopka</td>
+      <td>Marcelo Baratela</td>
+      <td>05/05/2026</td>
+      <td style="font-size:11px;color:var(--text3)">bateram o veiculo e mandamos esse</td>
+    </tr>
+  
+    <tr>
+      <td>VAC-003</td>
+      <td>Allan</td>
+      <td>Apopka</td>
+      <td>05/05/2026</td>
+      <td style="font-size:11px;color:var(--text3)">Esta em Port st.Lucie</td>
+    </tr>
+  
+    <tr>
+      <td>VER-002</td>
+      <td>Apopka</td>
+      <td>Luis Castro 2</td>
+      <td>05/06/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>VER-008</td>
+      <td>Luis Castro</td>
+      <td>Apopka</td>
+      <td>05/06/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRM-001</td>
+      <td>Luis Castro</td>
+      <td>Apopka</td>
+      <td>05/06/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>RTD-017</td>
+      <td>Apopka</td>
+      <td>Robert</td>
+      <td>05/06/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRM-025</td>
+      <td>Luis Castro</td>
+      <td>Luis Castro 4</td>
+      <td>05/06/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>DIW-008</td>
+      <td>Apopka</td>
+      <td>Robert</td>
+      <td>05/07/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRM-026</td>
+      <td>Apopka</td>
+      <td>Robert</td>
+      <td>05/08/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>LOC-013</td>
+      <td>Apopka</td>
+      <td>Robert</td>
+      <td>05/09/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>ULC-008</td>
+      <td>Jonh</td>
+      <td>Robert</td>
+      <td>05/10/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRP-035</td>
+      <td>Apopka</td>
+      <td>Allan 2</td>
+      <td>05/12/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRP-008</td>
+      <td>Yard</td>
+      <td>Carlos Silva</td>
+      <td>05/12/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>VAC-001</td>
+      <td>Yard</td>
+      <td>Carlos Silva</td>
+      <td>05/19/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRD-009</td>
+      <td>Apopka</td>
+      <td>Felipe Resende</td>
+      <td>05/15/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRD-001</td>
+      <td>Adilson</td>
+      <td>Carlos Silva</td>
+      <td>05/15/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>RTD-031</td>
+      <td>Apopka</td>
+      <td>Walter Vecchi</td>
+      <td>05/16/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRK-035</td>
+      <td>SATURNINO</td>
+      <td>Walter Vecchi</td>
+      <td>05/19/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  
+    <tr>
+      <td>TRP-008</td>
+      <td>Carlinhos</td>
+      <td>Apopka</td>
+      <td>05/19/2026</td>
+      <td style="font-size:11px;color:var(--text3)"></td>
+    </tr>
+  </tbody>
     </table>
   </div>
 </div>
@@ -620,10 +1148,10 @@ tr.row-pend:hover td{background:#fef9ec}
       <div style="font-size:12px;color:var(--text3);margin-top:2px">Clique em um team para ver os assets e o supervisor</div>
     </div>
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-      <input type="text" id="teams-search" placeholder="Buscar..." oninput="renderTeams()" style="background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:7px 12px;border-radius:7px;font-size:13px;outline:none;width:160px">
-      <select id="supervisor-select" onchange="filterBySupervisor()" style="background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:7px 12px;border-radius:7px;font-size:13px;outline:none;cursor:pointer;min-width:180px"><option value="">Todos os supervisores</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Deneer Ostaiza da Silva">Deneer Ostaiza da Silva</option><option value="Drivers">Drivers</option><option value="Felipe Resende">Felipe Resende</option><option value="Gustavo Martinez">Gustavo Martinez</option><option value="Joao Felipe Donato de Souza">Joao Felipe Donato de Souza</option><option value="João Felipe Donato de Sousa">João Felipe Donato de Sousa</option><option value="Pendente">Pendente</option><option value="Renato Fusari">Renato Fusari</option><option value="Wagner Lenlei Jr">Wagner Lenlei Jr</option><option value="Walter Vecchi">Walter Vecchi</option></select>
+      <input type="text" id="teams-search" placeholder="Buscar..." oninput="renderTeams()" style="background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:7px 12px;border-radius:7px;font-size:13px;outline:none;width:160px" fdprocessedid="h1u1ik">
+      <select id="supervisor-select" onchange="filterBySupervisor()" style="background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:7px 12px;border-radius:7px;font-size:13px;outline:none;cursor:pointer;min-width:180px" fdprocessedid="ey1of"><option value="">Todos os supervisores</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Deneer Ostaiza da Silva">Deneer Ostaiza da Silva</option><option value="Drivers">Drivers</option><option value="Felipe Resende">Felipe Resende</option><option value="Gustavo Martinez">Gustavo Martinez</option><option value="Joao Felipe Donato de Souza">Joao Felipe Donato de Souza</option><option value="João Felipe Donato de Sousa">João Felipe Donato de Sousa</option><option value="Pendente">Pendente</option><option value="Renato Fusari">Renato Fusari</option><option value="Wagner Lenlei Jr">Wagner Lenlei Jr</option><option value="Walter Vecchi">Walter Vecchi</option></select>
       <div style="position:relative;display:inline-block">
-        <button id="team-picker-btn" onclick="toggleTeamPicker()" style="background: var(--bg3); border-color: var(--border2); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; color: var(--text); padding: 7px 12px; border-radius: 7px; font-size: 13px; outline: none; cursor: pointer; min-width: 160px; text-align: left; font-family: var(--font);">Selecionar teams ▾</button>
+        <button id="team-picker-btn" onclick="toggleTeamPicker()" style="background: var(--bg3); border-color: var(--border2); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; color: var(--text); padding: 7px 12px; border-radius: 7px; font-size: 13px; outline: none; cursor: pointer; min-width: 160px; text-align: left; font-family: var(--font);" fdprocessedid="7hb7p">Selecionar teams ▾</button>
         <div id="team-picker" style="display:none;position:absolute;top:36px;left:0;background:var(--bg2);border:1px solid var(--border2);border-radius:10px;padding:10px;min-width:220px;z-index:200;box-shadow:0 4px 16px rgba(0,0,0,.12);max-height:300px;overflow-y:auto">
           <div style="display:flex;justify-content:space-between;margin-bottom:8px">
             <span style="font-size:11px;font-weight:600;color:var(--text3);text-transform:uppercase">Selecionar teams</span>
@@ -635,10 +1163,10 @@ tr.row-pend:hover td{background:#fef9ec}
           <div id="team-checkboxes"><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Abenamar" style="cursor: pointer;"> Abenamar</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Adilson" style="cursor: pointer;"> Adilson</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Alberto" style="cursor: pointer;"> Alberto</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Allan 1" style="cursor: pointer;"> Allan 1</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Allan 2" style="cursor: pointer;"> Allan 2</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Alvaro/Marcelo" style="cursor: pointer;"> Alvaro/Marcelo</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Anderson/Walter ( CSJ)" style="cursor: pointer;"> Anderson/Walter ( CSJ)</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Apopka" style="cursor: pointer;"> Apopka</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Carlos Silva" style="cursor: pointer;"> Carlos Silva</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Christian" style="cursor: pointer;"> Christian</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Cristian" style="cursor: pointer;"> Cristian</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Denner" style="cursor: pointer;"> Denner</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Enoe" style="cursor: pointer;"> Enoe</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Esteban/Marcelo" style="cursor: pointer;"> Esteban/Marcelo</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Felipe Resende" style="cursor: pointer;"> Felipe Resende</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Francisco" style="cursor: pointer;"> Francisco</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Geral" style="cursor: pointer;"> Geral</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Joao Felipe Donato" style="cursor: pointer;"> Joao Felipe Donato</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Jonh" style="cursor: pointer;"> Jonh</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Jose Saturnino" style="cursor: pointer;"> Jose Saturnino</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Jose Silva" style="cursor: pointer;"> Jose Silva</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Juan Carlos" style="cursor: pointer;"> Juan Carlos</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Karyme" style="cursor: pointer;"> Karyme</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Luis Castro" style="cursor: pointer;"> Luis Castro</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Luis Castro 2" style="cursor: pointer;"> Luis Castro 2</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Luis/ Lucas" style="cursor: pointer;"> Luis/ Lucas</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Luis/Lucas" style="cursor: pointer;"> Luis/Lucas</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Maikel" style="cursor: pointer;"> Maikel</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Marcelo" style="cursor: pointer;"> Marcelo</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Marcelo Baratela" style="cursor: pointer;"> Marcelo Baratela</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Noel/Marcelo" style="cursor: pointer;"> Noel/Marcelo</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Pendente" style="cursor: pointer;"> Pendente</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Ramon" style="cursor: pointer;"> Ramon</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Renato Fusari" style="cursor: pointer;"> Renato Fusari</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Rodrigo" style="cursor: pointer;"> Rodrigo</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Sidney" style="cursor: pointer;"> Sidney</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Tadeu" style="cursor: pointer;"> Tadeu</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Walter" style="cursor: pointer;"> Walter</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Washinton" style="cursor: pointer;"> Washinton</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Wladimir" style="cursor: pointer;"> Wladimir</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Yard Port" style="cursor: pointer;"> Yard Port</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Yard SC" style="cursor: pointer;"> Yard SC</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Yard WI" style="cursor: pointer;"> Yard WI</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Yonjarlin" style="cursor: pointer;"> Yonjarlin</label><label style="display: flex; align-items: center; gap: 8px; padding: 5px 4px; cursor: pointer; font-size: 13px; color: var(--text2); border-radius: 5px;"><input type="checkbox" value="Yovani" style="cursor: pointer;"> Yovani</label></div>
         </div>
       </div>
-      <button onclick="printSupervisorReport()" style="background:var(--blue);color:#fff;border:none;padding:7px 16px;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;font-family:var(--font)">🖨 Imprimir</button>
+      <button onclick="printSupervisorReport()" style="background:var(--blue);color:#fff;border:none;padding:7px 16px;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;font-family:var(--font)" fdprocessedid="x5e9h9">🖨 Imprimir</button>
     </div>
   </div>
-  <div class="teams-grid" id="teams-grid"><div class="team-card" onclick="openTeamPopup('Abenamar')"><div class="team-card-name">Abenamar</div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">UTILITY LOCATOR: 1</span><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Adilson')"><div class="team-card-name">Adilson</div><div class="team-card-leader">Supervisor: <span>Felipe Resende</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Alberto')"><div class="team-card-name">Alberto</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">DITCH WITCH: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Allan 1')"><div class="team-card-name">Allan 1</div><div class="team-card-leader">Supervisor: <span>Gustavo Martinez</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 3</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span><span class="asset-pill">VACUUM: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Allan 2')"><div class="team-card-name">Allan 2</div><div class="team-card-leader">Supervisor: <span>Carlos Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Alvaro/Marcelo')"><div class="team-card-name">Alvaro/Marcelo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">EXCAVATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Anderson/Walter ( CSJ)')"><div class="team-card-name">Anderson/Walter ( CSJ)</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Apopka')"><div class="team-card-name">Apopka</div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 15</span><span class="asset-pill">TRUCK: 10</span><span class="asset-pill">DITCH WITCH: 5</span><span class="asset-pill">VERMEER: 3</span><span class="asset-pill">LOCATOR: 4</span><span class="asset-pill">GPRS: 3</span><span class="asset-pill">COMPRESSOR: 2</span><span class="asset-pill">EXCAVATOR: 2</span><span class="asset-pill">ESCAVATOR: 1</span><span class="asset-pill">FORTLIFT: 1</span><span class="asset-pill">FORKLIFT: 1</span><span class="asset-pill">CHRY: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Christian')"><div class="team-card-name">Christian</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Cristian')"><div class="team-card-name">Cristian</div><div class="team-card-leader">Supervisor: <span>João Felipe Donato de Sousa</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Denner')"><div class="team-card-name">Denner <span style="font-size:10px;background:var(--blue3);color:var(--blue);padding:1px 6px;border-radius:10px;font-weight:500">+Geral</span></div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 3</span></div></div><div class="team-card" onclick="openTeamPopup('Enoe')"><div class="team-card-name">Enoe</div><div class="team-card-leader">Supervisor: <span>Gustavo Martinez</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Esteban/Marcelo')"><div class="team-card-name">Esteban/Marcelo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">LOCATOR: 2</span></div></div><div class="team-card" onclick="openTeamPopup('Felipe Resende')"><div class="team-card-name">Felipe Resende</div><div class="team-card-leader">Supervisor: <span>Carlos Silva</span></div><div class="team-card-pills"><span class="asset-pill">VACUUM: 1</span><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Francisco')"><div class="team-card-name">Francisco</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Joao Felipe Donato')"><div class="team-card-name">Joao Felipe Donato</div><div class="team-card-leader">Supervisor: <span>Apopka</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">UTILITY LOCATOR: 2</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Jonh')"><div class="team-card-name">Jonh</div><div class="team-card-leader">Supervisor: <span>Wagner Lenlei Jr</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Jose Saturnino')"><div class="team-card-name">Jose Saturnino</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 3</span><span class="asset-pill">COMPRESSOR: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">EXCAVATOR: 2</span></div></div><div class="team-card" onclick="openTeamPopup('Jose Silva')"><div class="team-card-name">Jose Silva</div><div class="team-card-leader">Supervisor: <span>João Felipe Donato de Sousa</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Juan Carlos')"><div class="team-card-name">Juan Carlos</div><div class="team-card-leader">Supervisor: <span>Carlos Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Karyme')"><div class="team-card-name">Karyme</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Luis Castro')"><div class="team-card-name">Luis Castro</div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Luis Castro 2')"><div class="team-card-name">Luis Castro 2</div><div class="team-card-leader">Supervisor: <span>Carlos Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">TRAILER: 3</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Luis/Lucas')"><div class="team-card-name">Luis/Lucas</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">VACUUM: 1</span><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Maikel')"><div class="team-card-name">Maikel</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Marcelo')"><div class="team-card-name">Marcelo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">VERMEER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Marcelo Baratela')"><div class="team-card-name">Marcelo Baratela</div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Noel/Marcelo')"><div class="team-card-name">Noel/Marcelo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Pendente')"><div class="team-card-name">Pendente</div><div class="team-card-leader">Supervisor: <span>Pendente</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Ramon')"><div class="team-card-name">Ramon</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Renato Fusari')"><div class="team-card-name">Renato Fusari <span style="font-size:10px;background:var(--blue3);color:var(--blue);padding:1px 6px;border-radius:10px;font-weight:500">+Geral</span></div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 9</span><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">UTILITY LOCATOR: 1</span><span class="asset-pill">GPRS: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Rodrigo')"><div class="team-card-name">Rodrigo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Sidney')"><div class="team-card-name">Sidney</div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Tadeu')"><div class="team-card-name">Tadeu</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 3</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">VACUUM: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Walter')"><div class="team-card-name">Walter <span style="font-size:10px;background:var(--blue3);color:var(--blue);padding:1px 6px;border-radius:10px;font-weight:500">+Geral</span></div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">LOCATOR: 2</span><span class="asset-pill">TRAILER: 6</span></div></div><div class="team-card" onclick="openTeamPopup('Washinton')"><div class="team-card-name">Washinton</div><div class="team-card-leader">Supervisor: <span>Drivers</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Wladimir')"><div class="team-card-name">Wladimir</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Yard Port')"><div class="team-card-name">Yard Port</div><div class="team-card-leader">Supervisor: <span>João Felipe Donato de Sousa</span></div><div class="team-card-pills"><span class="asset-pill">VACUUM: 1</span><span class="asset-pill">FORTLIFT: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Yard SC')"><div class="team-card-name">Yard SC</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">EXCAVATOR: 1</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">COMPRESSOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Yard WI')"><div class="team-card-name">Yard WI</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">VACUUM: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Yovani')"><div class="team-card-name">Yovani</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">COMPRESSOR: 1</span></div></div></div>
+  <div class="teams-grid" id="teams-grid"><div class="team-card" onclick="openTeamPopup('Abenamar')"><div class="team-card-name">Abenamar</div><div class="team-card-leader">Supervisor: <span>Felipe Resende</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Adilson')"><div class="team-card-name">Adilson</div><div class="team-card-leader">Supervisor: <span>Felipe Resende</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Alberto')"><div class="team-card-name">Alberto</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">DITCH WITCH: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Allan 1')"><div class="team-card-name">Allan 1</div><div class="team-card-leader">Supervisor: <span>Gustavo Martinez</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 3</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span><span class="asset-pill">VACUUM: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Allan 2')"><div class="team-card-name">Allan 2</div><div class="team-card-leader">Supervisor: <span>Felipe Resende</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Alvaro/Marcelo')"><div class="team-card-name">Alvaro/Marcelo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">EXCAVATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Anderson/Walter ( CSJ)')"><div class="team-card-name">Anderson/Walter ( CSJ)</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Apopka')"><div class="team-card-name">Apopka</div><div class="team-card-leader">Supervisor: <span>Apopka</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 9</span><span class="asset-pill">DITCH WITCH: 4</span><span class="asset-pill">VERMEER: 4</span><span class="asset-pill">TRAILER: 15</span><span class="asset-pill">LOCATOR: 4</span><span class="asset-pill">GPRS: 3</span><span class="asset-pill">COMPRESSOR: 2</span><span class="asset-pill">EXCAVATOR: 2</span><span class="asset-pill">ESCAVATOR: 1</span><span class="asset-pill">FORTLIFT: 1</span><span class="asset-pill">FORKLIFT: 1</span><span class="asset-pill">CHRY: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Carlos Silva')"><div class="team-card-name">Carlos Silva</div><div class="team-card-leader">Supervisor: <span>Carlos Silva</span></div><div class="team-card-pills"><span class="asset-pill">VACUUM: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Christian')"><div class="team-card-name">Christian</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Cristian')"><div class="team-card-name">Cristian</div><div class="team-card-leader">Supervisor: <span>João Felipe Donato de Sousa</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Denner')"><div class="team-card-name">Denner <span style="font-size:10px;background:var(--blue3);color:var(--blue);padding:1px 6px;border-radius:10px;font-weight:500">+Geral</span></div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 4</span></div></div><div class="team-card" onclick="openTeamPopup('Enoe')"><div class="team-card-name">Enoe</div><div class="team-card-leader">Supervisor: <span>Gustavo Martinez</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Esteban/Marcelo')"><div class="team-card-name">Esteban/Marcelo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">LOCATOR: 2</span></div></div><div class="team-card" onclick="openTeamPopup('Felipe Resende')"><div class="team-card-name">Felipe Resende</div><div class="team-card-leader">Supervisor: <span>João Felipe Donato de Sousa</span></div><div class="team-card-pills"><span class="asset-pill">VACUUM: 1</span><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Francisco')"><div class="team-card-name">Francisco</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Joao Felipe Donato')"><div class="team-card-name">Joao Felipe Donato</div><div class="team-card-leader">Supervisor: <span>Joao Felipe Donato de Souza</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Jonh')"><div class="team-card-name">Jonh</div><div class="team-card-leader">Supervisor: <span>Wagner Lenlei Jr</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Jose Saturnino')"><div class="team-card-name">Jose Saturnino</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 3</span><span class="asset-pill">COMPRESSOR: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">EXCAVATOR: 2</span></div></div><div class="team-card" onclick="openTeamPopup('Jose Silva')"><div class="team-card-name">Jose Silva</div><div class="team-card-leader">Supervisor: <span>João Felipe Donato de Sousa</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 3</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Juan Carlos')"><div class="team-card-name">Juan Carlos</div><div class="team-card-leader">Supervisor: <span>Carlos Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Karyme')"><div class="team-card-name">Karyme</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Luis Castro')"><div class="team-card-name">Luis Castro</div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Luis Castro 2')"><div class="team-card-name">Luis Castro 2</div><div class="team-card-leader">Supervisor: <span>Carlos Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Luis/ Lucas')"><div class="team-card-name">Luis/ Lucas</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Luis/Lucas')"><div class="team-card-name">Luis/Lucas</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">VACUUM: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Maikel')"><div class="team-card-name">Maikel</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Marcelo')"><div class="team-card-name">Marcelo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Marcelo Baratela')"><div class="team-card-name">Marcelo Baratela</div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Noel/Marcelo')"><div class="team-card-name">Noel/Marcelo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Pendente')"><div class="team-card-name">Pendente</div><div class="team-card-leader">Supervisor: <span>Pendente</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Ramon')"><div class="team-card-name">Ramon</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Renato Fusari')"><div class="team-card-name">Renato Fusari <span style="font-size:10px;background:var(--blue3);color:var(--blue);padding:1px 6px;border-radius:10px;font-weight:500">+Geral</span></div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 2</span><span class="asset-pill">UTILITY LOCATOR: 1</span><span class="asset-pill">GPRS: 1</span><span class="asset-pill">TRAILER: 9</span></div></div><div class="team-card" onclick="openTeamPopup('Rodrigo')"><div class="team-card-name">Rodrigo</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Sidney')"><div class="team-card-name">Sidney</div><div class="team-card-leader">Supervisor: <span>Deneer Ostaiza da Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Tadeu')"><div class="team-card-name">Tadeu</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 3</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">TRAILER: 1</span><span class="asset-pill">VERMEER: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Walter')"><div class="team-card-name">Walter <span style="font-size:10px;background:var(--blue3);color:var(--blue);padding:1px 6px;border-radius:10px;font-weight:500">+Geral</span></div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">LOCATOR: 2</span><span class="asset-pill">TRAILER: 6</span></div></div><div class="team-card" onclick="openTeamPopup('Washinton')"><div class="team-card-name">Washinton</div><div class="team-card-leader">Supervisor: <span>Drivers</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Wladimir')"><div class="team-card-name">Wladimir</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">VERMEER: 1</span><span class="asset-pill">LOCATOR: 1</span><span class="asset-pill">UTILITY LOCATOR: 1</span><span class="asset-pill">EXCAVATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Yard Port')"><div class="team-card-name">Yard Port</div><div class="team-card-leader">Supervisor: <span>João Felipe Donato de Sousa</span></div><div class="team-card-pills"><span class="asset-pill">FORTLIFT: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Yard SC')"><div class="team-card-name">Yard SC</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">COMPRESSOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Yard WI')"><div class="team-card-name">Yard WI</div><div class="team-card-leader">Supervisor: <span>Walter Vecchi</span></div><div class="team-card-pills"><span class="asset-pill">VACUUM: 2</span></div></div><div class="team-card" onclick="openTeamPopup('Yonjarlin')"><div class="team-card-name">Yonjarlin</div><div class="team-card-leader">Supervisor: <span>Carlos Silva</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">DITCH WITCH: 1</span><span class="asset-pill">TRAILER: 2</span><span class="asset-pill">UTILITY LOCATOR: 1</span></div></div><div class="team-card" onclick="openTeamPopup('Yovani')"><div class="team-card-name">Yovani</div><div class="team-card-leader">Supervisor: <span>Renato Fusari</span></div><div class="team-card-pills"><span class="asset-pill">TRUCK: 1</span><span class="asset-pill">COMPRESSOR: 1</span></div></div></div>
 </div>
 
 <!-- CADASTROS PAGE -->
@@ -703,16 +1231,16 @@ tr.row-pend:hover td{background:#fef9ec}
 </div>
 
 <!-- TEAM POPUP -->
-<div id="team-popup-bg" onclick="closeTeamPopup(event)">
+<div id="team-popup-bg" onclick="closeTeamPopup(event)" class="">
   <div id="team-popup">
     <div id="team-popup-header">
       <div>
-        <h3 id="tp-title"></h3>
-        <div class="meta" id="tp-meta"></div>
+        <h3 id="tp-title">Team: Jose Silva</h3>
+        <div class="meta" id="tp-meta">Supervisor: <span style="color:var(--blue);font-weight:500">João Felipe Donato de Sousa</span></div>
       </div>
-      <button class="popup-close" onclick="document.getElementById('team-popup-bg').classList.remove('open')">✕</button>
+      <button class="popup-close" onclick="document.getElementById('team-popup-bg').classList.remove('open')" fdprocessedid="rvdoes">✕</button>
     </div>
-    <div id="team-popup-body"></div>
+    <div id="team-popup-body"><div class="popup-stats"><div class="popup-stat"><div class="n">9</div><div class="l">Total</div></div><div class="popup-stat"><div class="n">3</div><div class="l">Trucks</div></div><div class="popup-stat"><div class="n">2</div><div class="l">Trailers</div></div><div class="popup-stat"><div class="n">1</div><div class="l">Máquinas</div></div></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">TRK-023</span><span class="popup-asset-type">TRUCK</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">F-150</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;font-family:monospace;background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:1px 6px;color:var(--text2);cursor:pointer" title="Clique para editar placa">Plate: DY67UI</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: 1FTEW1CP6HFC30797</span></div></div><span class="badge ok">✅ Em Dia</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="bpv9bn"><option value="✅ Em Dia" selected="">✅ Em Dia</option><option value="🟠 Em andamento">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="0b1y0t">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="mf3z5j">✏</button></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">RTD-013</span><span class="popup-asset-type">TRUCK</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">F-450</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;font-family:monospace;background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:1px 6px;color:var(--text2);cursor:pointer" title="Clique para editar placa">Plate: 13ELXQ Sanford</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: 1FD0W4HT1SEC62096</span></div></div><span class="badge ok">✅ Em Dia</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="56lb1k"><option value="✅ Em Dia" selected="">✅ Em Dia</option><option value="🟠 Em andamento">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="lw69gs">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="0vrv65">✏</button></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">TRM-028</span><span class="popup-asset-type">TRAILER</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">MACHINE TRAILER</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;font-family:monospace;background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:1px 6px;color:var(--text2);cursor:pointer" title="Clique para editar placa">Plate: 53FYBG</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: 7JEPU1724TG000310</span></div></div><span class="badge ok">✅ Em Dia</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="ftda1s"><option value="✅ Em Dia" selected="">✅ Em Dia</option><option value="🟠 Em andamento">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="ld983l">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="wtsqz2">✏</button></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">VER-015</span><span class="popup-asset-type">VERMEER</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">D20X22</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;color:var(--text3);cursor:pointer">✏ Plate</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: 1VRA170VKT1006642</span></div></div><span class="badge ok">✅ Em Dia</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="c7vlyhp"><option value="✅ Em Dia" selected="">✅ Em Dia</option><option value="🟠 Em andamento">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="ekfx4e">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="08klhj">✏</button></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">LOC-020</span><span class="popup-asset-type">LOCATOR</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">MAG X PRO</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;color:var(--text3);cursor:pointer">✏ Plate</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: 2401-15658 Tela:2210-02343</span></div></div><span class="badge ok">✅ Em Dia</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="ok1eqw"><option value="✅ Em Dia" selected="">✅ Em Dia</option><option value="🟠 Em andamento">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="vmqa9a">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="436sc">✏</button></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">ULC-005</span><span class="popup-asset-type">UTILITY LOCATOR</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">NEXUS DUAL PRO 10W</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;color:var(--text3);cursor:pointer">✏ Plate</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: 206101289/207101289</span></div></div><span class="badge ok">✅ Em Dia</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="e6jc7"><option value="✅ Em Dia" selected="">✅ Em Dia</option><option value="🟠 Em andamento">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="7v1qxp">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="eiomga">✏</button></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">TRP-018</span><span class="popup-asset-type">TRAILER</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">TRAILER PIPE</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;font-family:monospace;background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:1px 6px;color:var(--text2);cursor:pointer" title="Clique para editar placa">Plate: DM63SF</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: NOVIN0201466160</span></div></div><span class="badge ok">✅ Em Dia</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="v7cjv"><option value="✅ Em Dia" selected="">✅ Em Dia</option><option value="🟠 Em andamento">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="65f2il">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="p5bqi9">✏</button></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">VAC-003</span><span class="popup-asset-type">VACUUM</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">VERMEER CSGT</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;font-family:monospace;background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:1px 6px;color:var(--text2);cursor:pointer" title="Clique para editar placa">Plate: 96FBCV</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: 7NWB192W7MK010007</span></div></div><span class="badge warn">🟠 Andamento</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="wqv4r8"><option value="✅ Em Dia">✅ Em Dia</option><option value="🟠 Em andamento" selected="">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="pj12cw">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="jqbh3m">✏</button></div><div class="popup-asset-row" style="cursor: pointer;"><span style="font-size:14px;color:var(--blue);margin-right:2px">↗</span><span class="popup-asset-cod">TRK-044</span><span class="popup-asset-type">TRUCK</span><div style="flex:1;min-width:0"><div style="font-size:13px;color:var(--text2)">F-150</div><div style="display:flex;gap:8px;margin-top:2px"><span style="font-size:10px;font-family:monospace;background:var(--bg4);border:1px solid var(--border);border-radius:4px;padding:1px 6px;color:var(--text2);cursor:pointer" title="Clique para editar placa">Plate: PJ785P</span><span style="font-size:10px;font-family:monospace;color:var(--text3);word-break:break-all;cursor:pointer">VIN: 1FTEW1EG3FFB13253</span></div></div><span class="badge ok">✅ Em Dia</span><select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0" fdprocessedid="ik2j2w"><option value="✅ Em Dia" selected="">✅ Em Dia</option><option value="🟠 Em andamento">🟠 Andamento</option><option value="🟡 Pendente">🟡 Pendente</option></select><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0" fdprocessedid="feoaqm">↗ Mover</button><button class="icon-btn" style="font-size:11px;padding:3px 8px;flex-shrink:0;color:var(--blue);border-color:var(--blue)" fdprocessedid="4jyw7k">✏</button></div></div>
   </div>
 </div>
 
@@ -735,11 +1263,36 @@ tr.row-pend:hover td{background:#fef9ec}
 </div>
 
 <!-- MODAL -->
-<div id="modal-bg" onclick="closeModal(event)">
+<div id="modal-bg" onclick="closeModal(event)" class="">
   <div id="modal">
     <h3 id="modal-title">Registrar movimentação</h3>
-    <p class="subtitle" id="modal-sub"></p>
-    <div id="modal-body"></div>
+    <p class="subtitle" id="modal-sub">Transferência de equipamento entre equipes</p>
+    <div id="modal-body">
+    <div class="field-grid">
+      <div class="field full"><label>Equipamento</label>
+        <select id="mv-cod" fdprocessedid="059dw6"><option value="">Selecione...</option><option value="RTD-031">RTD-031 — F-450 (Allan 1)</option><option value="TRK-030">TRK-030 — RAM -1500 (Allan 1)</option><option value="RTD-028">RTD-028 — F-550 (Allan 1)</option><option value="LOC-018">LOC-018 — MAG X PRO (Allan 1)</option><option value="TRM-020">TRM-020 — MACHINE TRAILER (Allan 1)</option><option value="VER-005">VER-005 — D20x22 (Allan 1)</option><option value="ULC-004">ULC-004 — NEXUS DUAL PRO 10W (Allan 1)</option><option value="TRP-034">TRP-034 — TRAILER PIPE (Allan 1)</option><option value="VAC-006">VAC-006 — Air 555 STD (Allan 1)</option><option value="RTD-035">RTD-035 — F-550 (Enoe)</option><option value="TRK-035">TRK-035 — RAM 2500 (Enoe)</option><option value="TRM-023">TRM-023 — MACHINE TRAILER (Enoe)</option><option value="VER-009">VER-009 — D20X22 (Enoe)</option><option value="LOC-021">LOC-021 — DIGITRAK F5 (Enoe)</option><option value="TRP-004">TRP-004 — TRAILER PIPE (Enoe)</option><option value="TRK-027">TRK-027 — F-150 (Denner)</option><option value="TRP-032">TRP-032 — TRAILER PIPE (Denner)</option><option value="TRK-008">TRK-008 — RAM 3500 (Sidney)</option><option value="TRD-007">TRD-007 — DUMP TRAILER (Sidney)</option><option value="RTD-032">RTD-032 — F-550 (Marcelo Baratela)</option><option value="TRK-028">TRK-028 — SIERRA (Marcelo Baratela)</option><option value="TRM-010">TRM-010 — MACHINE TRAILER (Marcelo Baratela)</option><option value="VER-010">VER-010 — D20x22 (Marcelo Baratela)</option><option value="LOC-008">LOC-008 — MAG X PRO (Marcelo Baratela)</option><option value="ULC-003">ULC-003 — NEXUS DUAL PRO 10W (Marcelo Baratela)</option><option value="TRP-011">TRP-011 — TRAILER PIPE (Geral)</option><option value="TRP-017">TRP-017 — TRAILER PIPE (Geral)</option><option value="TRP-027">TRP-027 — TRAILER PIPE (Geral)</option><option value="TRK-018">TRK-018 — RAM- 1500 (Luis Castro)</option><option value="RTD-011">RTD-011 — F450 (Luis Castro)</option><option value="TRM-007">TRM-007 — MACHINE TRAILER (Luis Castro)</option><option value="VER-017">VER-017 — D10X15 (Luis Castro)</option><option value="LOC-017">LOC-017 — MAG X PRO (Luis Castro)</option><option value="ULC-002">ULC-002 — NEXUS DUAL PRO 10W (Luis Castro)</option><option value="TRP-010">TRP-010 — TRAILER PIPE (Luis Castro)</option><option value="TRK-038">TRK-038 — F-250 (Juan Carlos)</option><option value="TRD-001">TRD-001 — DUMP TRAILER (Juan Carlos)</option><option value="VAC-001">VAC-001 — VERMEER CSGT (Carlos Silva)</option><option value="TRK-002">TRK-002 — F-450 (Luis Castro 2)</option><option value="TRK-016">TRK-016 — RAM 3500 (Luis Castro 2)</option><option value="VER-002">VER-002 — D10X15 (Luis Castro 2)</option><option value="TRM-025">TRM-025 — MACHINE TRAILER (Luis Castro 2)</option><option value="TRP-019">TRP-019 — TRAILER PIPE (Luis Castro 2)</option><option value="LOC-004">LOC-004 — MAG 9 (Luis Castro 2)</option><option value="TRK-031">TRK-031 — RAM 1500 (Yonjarlin)</option><option value="DIW-008">DIW-008 — JT10 (Yonjarlin)</option><option value="TRM-026">TRM-026 — MACHINE TRAILER (Yonjarlin)</option><option value="ULC-008">ULC-008 — NEXUS DUAL PRO 10W (Yonjarlin)</option><option value="TRP-036">TRP-036 — TRAILER PIPE (Yonjarlin)</option><option value="TRK-022">TRK-022 — F-350 (Apopka)</option><option value="TRK-023">TRK-023 — F-150 (Jose Silva)</option><option value="RTD-013">RTD-013 — F-450 (Jose Silva)</option><option value="TRM-028">TRM-028 — MACHINE TRAILER (Jose Silva)</option><option value="VER-015">VER-015 — D20X22 (Jose Silva)</option><option value="LOC-020">LOC-020 — MAG X PRO (Jose Silva)</option><option value="ULC-005">ULC-005 — NEXUS DUAL PRO 10W (Jose Silva)</option><option value="TRP-018">TRP-018 — TRAILER PIPE (Jose Silva)</option><option value="VAC-003">VAC-003 — VERMEER CSGT (Jose Silva)</option><option value="TRK-044">TRK-044 — F-150 (Jose Silva)</option><option value="RTD-023">RTD-023 — F-550 (Cristian)</option><option value="TRD-005">TRD-005 — DUMP TRAILER (Cristian)</option><option value="FLT-003">FLT-003 — M5500 (Yard Port)</option><option value="TRD-002">TRD-002 — DUMP TRAILER (Jonh)</option><option value="TRK-040">TRK-040 — F-150 (Felipe Resende)</option><option value="ULC-001">ULC-001 — NEXUS DUAL PRO 10W (Felipe Resende)</option><option value="TRK-029">TRK-029 — F-150 (Adilson)</option><option value="TRD-009">TRD-009 — DUMP TRAILER (Adilson)</option><option value="RTD-017">RTD-017 — F-450 (Abenamar)</option><option value="VER-003">VER-003 — D20x22 (Abenamar)</option><option value="LOC-013">LOC-013 — MAG X PRO (Abenamar)</option><option value="TRK-034">TRK-034 — RAM -1500 (Allan 2)</option><option value="TRK-006">TRK-006 — RAM 3500 (Allan 2)</option><option value="TRM-011">TRM-011 — MACHINE TRAILER (Allan 2)</option><option value="DIW-001">DIW-001 — JT20 (Allan 2)</option><option value="LOC-014">LOC-014 — MAG X PRO (Allan 2)</option><option value="ULC-009">ULC-009 — NEXUS DUAL PRO 10W (Allan 2)</option><option value="TRP-035">TRP-035 — TRAILER PIPE (Allan 2)</option><option value="TRK-043">TRK-043 — RAM 2500 (Renato Fusari)</option><option value="TRK-039">TRK-039 — RAM 2500 (Renato Fusari)</option><option value="ULC-006">ULC-006 — NEXUS DUAL PRO 10W (Renato Fusari)</option><option value="GPR-002">GPR-002 — EASY LOCATOR CORE (Renato Fusari)</option><option value="RTD-025">RTD-025 — F-550 (Wladimir)</option><option value="TRM-009">TRM-009 — MACHINE TRAILER (Wladimir)</option><option value="VER-014">VER-014 — D20X22 (Wladimir)</option><option value="LOC-019">LOC-019 — MAG X PRO (Wladimir)</option><option value="ULC-007">ULC-007 — NEXUS DUAL PRO 10W (Wladimir)</option><option value="TRP-028">TRP-028 — TRAILER PIPE (Wladimir)</option><option value="TRN-001">TRN-001 — BOBOCAT E26 (Wladimir)</option><option value="RTD-027">RTD-027 — F-550 (Alberto)</option><option value="TRM-018">TRM-018 — MACHINE TRAILER (Alberto)</option><option value="DIW-007">DIW-007 — JT20XP (Alberto)</option><option value="TRK-037">TRK-037 — RAM 2500 (Yovani)</option><option value="CMP-008">CMP-008 — DOOSAN (Yovani)</option><option value="TRK-020">TRK-020 — RAM 1500 (Jose Saturnino)</option><option value="TRK-032">TRK-032 — RAM 3500 (Jose Saturnino)</option><option value="CMP-004">CMP-004 — SULLIVAN 185 (Jose Saturnino)</option><option value="TRD-006">TRD-006 — DUMP TRAILER (Jose Saturnino)</option><option value="TRN-004">TRN-004 — BOBCAT CAT E10 (Jose Saturnino)</option><option value="TRN-006">TRN-006 — JOHN DEERE 35G (Jose Saturnino)</option><option value="TRK-045">TRK-045 — RAM 3500 (Jose Saturnino)</option><option value="TRK-004">TRK-004 — SIVERADO (Rodrigo)</option><option value="TRM-022">TRM-022 — MACHINE TRAILER (Yard SC)</option><option value="TRC-003">TRC-003 — CAR TRAILER (Yard SC)</option><option value="CMP-007">CMP-007 — ALTAS COPCO - 185 (Yard SC)</option><option value="TRP-012">TRP-012 — TRAILER PIPE (Geral)</option><option value="TRP-016">TRP-016 — TRAILER PIPE (Geral)</option><option value="TRP-022">TRP-022 — DOUBLE PIPE (Geral)</option><option value="TRP-024">TRP-024 — TRAILER PIPE (Geral)</option><option value="TRP-026">TRP-026 — DOUBLE PIPE (Geral)</option><option value="TRP-030">TRP-030 — TRAILER PIPE (Geral)</option><option value="TRP-031">TRP-031 — TRAILER PIPE (Geral)</option><option value="TFC-001">TFC-001 — FIBER TRAILER (Geral)</option><option value="TFC-002">TFC-002 — FIBER TRAILER (Geral)</option><option value="RTD-034">RTD-034 — SILVERADO 3500 (Marcelo)</option><option value="TRK-036">TRK-036 — T-370 (Esteban/Marcelo)</option><option value="TRM-003">TRM-003 — MACHINE TRAILER (Esteban/Marcelo)</option><option value="DIW-009">DIW-009 — JT25 (Esteban/Marcelo)</option><option value="LOC-001">LOC-001 — DIGITRAK F5 (Esteban/Marcelo)</option><option value="LOC-009">LOC-009 — MAG X PRO (Esteban/Marcelo)</option><option value="RTD-018">RTD-018 — F-550 (Alvaro/Marcelo)</option><option value="TRM-004">TRM-004 — MACHINE TRAILER (Alvaro/Marcelo)</option><option value="DIW-004">DIW-004 — JT24 (Alvaro/Marcelo)</option><option value="LOC-015">LOC-015 — MAG X PRO (Alvaro/Marcelo)</option><option value="TRN-005">TRN-005 — BOBCAT CAT E10 (Alvaro/Marcelo)</option><option value="RTD-030">RTD-030 — F-550 (Noel/Marcelo)</option><option value="DIW-010">DIW-010 — JT25 (Noel/Marcelo)</option><option value="LOC-011">LOC-011 — DIGITRAK F5 (Noel/Marcelo)</option><option value="TRK-024">TRK-024 — F-150 (Karyme)</option><option value="LOC-002">LOC-002 — MAG 8 (Walter)</option><option value="LOC-012">LOC-012 — DIGITRAK F2 (Walter)</option><option value="RTD-022">RTD-022 — F-550 (Tadeu)</option><option value="TRK-026">TRK-026 — RAM-1500 (Tadeu)</option><option value="RTD-026">RTD-026 — F-550 (Tadeu)</option><option value="LOC-016">LOC-016 — MAG X PRO (Tadeu)</option><option value="TRM-019">TRM-019 — MACHINE TRAILER (Tadeu)</option><option value="VER-013">VER-013 — D20X22 (Tadeu)</option><option value="RTD-036">RTD-036 — RAM 2500 (Maikel)</option><option value="VAC-005">VAC-005 — VERMEER LP555SDT (Luis/Lucas)</option><option value="TRK-009">TRK-009 — RAM-3500 (Luis/ Lucas)</option><option value="RTD-003">RTD-003 — RAM 3500 (Ramon)</option><option value="RTD-029">RTD-029 — F-550 (Ramon)</option><option value="TRM-006">TRM-006 — MACHINE TRAILER (Ramon)</option><option value="VER-001">VER-001 — D10X15 (Ramon)</option><option value="RTD-012">RTD-012 — F-450 (Francisco)</option><option value="TRM-008">TRM-008 — MACHINE TRAILER (Francisco)</option><option value="VER-006">VER-006 — D20X22 (Francisco)</option><option value="ULC-010">ULC-010 — UTG-T5 (Anderson/Walter ( CSJ))</option><option value="VAC-002">VAC-002 — VAC TRON PMD 855 SDT (Yard WI)</option><option value="VAC-004">VAC-004 — DITCH  T14MV (Yard WI)</option><option value="TRP-001">TRP-001 — TRAILER PIPE (Geral)</option><option value="TRP-005">TRP-005 — TRAILER PIPE (Geral)</option><option value="TRP-013">TRP-013 — TRAILER PIPE (Geral)</option><option value="TRP-014">TRP-014 — TRAILER PIPE (Geral)</option><option value="TRP-033">TRP-033 — TRAILER PIPE (Geral)</option><option value="TRP-029">TRP-029 — TRAILER PIPE (Geral)</option><option value="TRK-025">TRK-025 — RAM-1500 (Christian)</option><option value="TRK-041">TRK-041 — FREIGTLINER (Apopka)</option><option value="TRK-042">TRK-042 — F-150 (Washinton)</option><option value="TRK-017">TRK-017 — F-150 (Joao Felipe Donato)</option><option value="TRK-003">TRK-003 — RAM 5500 (Apopka)</option><option value="TRK-005">TRK-005 — F-550 (Apopka)</option><option value="TRK-007">TRK-007 — RAM 3500 (Apopka)</option><option value="TRK-012">TRK-012 — Internacional NH025 (Apopka)</option><option value="TRK-014">TRK-014 — RAM 3500 (Apopka)</option><option value="TRK-015">TRK-015 — F-550 (Apopka)</option><option value="TRK-021">TRK-021 — F-550 (Apopka)</option><option value="DIW-002">DIW-002 — JT3020 (Apopka)</option><option value="DIW-003">DIW-003 — JT2020 (Apopka)</option><option value="DIW-005">DIW-005 — JT20 (Apopka)</option><option value="DIW-006">DIW-006 — JT20 (Apopka)</option><option value="VER-004">VER-004 — D10X15 (Apopka)</option><option value="VER-007">VER-007 — PLOW (Apopka)</option><option value="VER-016">VER-016 — D7X11 (Apopka)</option><option value="VER-008">VER-008 — D20X22 (Apopka)</option><option value="TRM-001">TRM-001 — MACHINE TRAILER (Apopka)</option><option value="TRM-002">TRM-002 — MACHINE TRAILER (Apopka)</option><option value="TRM-013">TRM-013 — MACHINE TRAILER (Apopka)</option><option value="TRM-021">TRM-021 — MACHINE TRAILER (Apopka)</option><option value="TRM-024">TRM-024 — MACHINE TRAILER (Apopka)</option><option value="TRM-027">TRM-027 — MACHINE TRAILER (Apopka)</option><option value="TRM-029">TRM-029 — MACHINE TRAILER (Apopka)</option><option value="TRM-030">TRM-030 — MACHINE TRAILER (Apopka)</option><option value="TRM-031">TRM-031 — MACHINE TRAILER (Apopka)</option><option value="TRP-015">TRP-015 — TRAILER PIPE (Apopka)</option><option value="TRP-008">TRP-008 — TRAILER PIPE (Apopka)</option><option value="TRP-020">TRP-020 — DOUBLE PIPE (Apopka)</option><option value="TRD-008">TRD-008 — DUMP TRAILER (Apopka)</option><option value="LOC-003">LOC-003 — MAG 8 (Apopka)</option><option value="LOC-005">LOC-005 — MAG 9 (Apopka)</option><option value="LOC-007">LOC-007 — DIGITRAK F2 (Apopka)</option><option value="LOC-022">LOC-022 — DIGITRAK F2 (Apopka)</option><option value="GPR-001">GPR-001 — EASY LOCATOR CORE (Apopka)</option><option value="GPR-003">GPR-003 — PinPoinr DQ00401 (Apopka)</option><option value="GPR-004">GPR-004 — DVL-500N (Apopka)</option><option value="CMP-003">CMP-003 — INGERSOLL-RANDP185WJD (Apopka)</option><option value="CMP-005">CMP-005 — SULLIVAN 185 CFM. (Apopka)</option><option value="TRN-003">TRN-003 — GEHL RT105 (Apopka)</option><option value="TRN-007">TRN-007 — MINI  ESCAVATOR (Apopka)</option><option value="TRF-001">TRF-001 — SPICE (Apopka)</option><option value="TRF-002">TRF-002 — SPICE (Apopka)</option><option value="FLT-001">FLT-001 — 10054 LEGACY (Apopka)</option><option value="FLT-002">FLT-002 — AMARELO (Apopka)</option><option value="SAMSUNG - PACIFICA">SAMSUNG - PACIFICA — PACIFICA (Apopka)</option><option value="TRN-002">TRN-002 — JOHN DEERE 35G (Apopka)</option><option value="TRP-009">TRP-009 — TRAILER PIPE (Pendente)</option></select>
+      </div>
+      <div class="field"><label>De (equipe origem)</label>
+        <select id="mv-from" fdprocessedid="53dd1">
+          <option value="">Selecione...</option>
+          <option value="Abenamar">Abenamar</option><option value="Adilson">Adilson</option><option value="Alberto">Alberto</option><option value="Allan 1">Allan 1</option><option value="Allan 2">Allan 2</option><option value="Alvaro/Marcelo">Alvaro/Marcelo</option><option value="Anderson/Walter ( CSJ)">Anderson/Walter ( CSJ)</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Christian">Christian</option><option value="Cristian">Cristian</option><option value="Denner">Denner</option><option value="Emprestado">Emprestado</option><option value="Enoe">Enoe</option><option value="Esteban/Marcelo">Esteban/Marcelo</option><option value="Felipe Resende">Felipe Resende</option><option value="Francisco">Francisco</option><option value="Geral">Geral</option><option value="Joao Felipe Donato">Joao Felipe Donato</option><option value="Jonh">Jonh</option><option value="Jose Saturnino">Jose Saturnino</option><option value="Jose Silva">Jose Silva</option><option value="Juan Carlos">Juan Carlos</option><option value="Karyme">Karyme</option><option value="Luis Castro">Luis Castro</option><option value="Luis Castro 2">Luis Castro 2</option><option value="Luis/ Lucas">Luis/ Lucas</option><option value="Luis/Lucas">Luis/Lucas</option><option value="Maikel">Maikel</option><option value="Manutenção">Manutenção</option><option value="Marcelo">Marcelo</option><option value="Marcelo Baratela">Marcelo Baratela</option><option value="Noel/Marcelo">Noel/Marcelo</option><option value="Pendente">Pendente</option><option value="Ramon">Ramon</option><option value="Renato Fusari">Renato Fusari</option><option value="Rodrigo">Rodrigo</option><option value="Sidney">Sidney</option><option value="Tadeu">Tadeu</option><option value="Walter">Walter</option><option value="Washinton">Washinton</option><option value="Wladimir">Wladimir</option><option value="Yard">Yard</option><option value="Yard Port">Yard Port</option><option value="Yard SC">Yard SC</option><option value="Yard WI">Yard WI</option><option value="Yonjarlin">Yonjarlin</option><option value="Yovani">Yovani</option>
+        </select>
+      </div>
+      <div class="field"><label>Para (equipe destino)</label>
+        <select id="mv-to" fdprocessedid="2fslja">
+          <option value="">Selecione...</option>
+          <option value="Abenamar">Abenamar</option><option value="Adilson">Adilson</option><option value="Alberto">Alberto</option><option value="Allan 1">Allan 1</option><option value="Allan 2">Allan 2</option><option value="Alvaro/Marcelo">Alvaro/Marcelo</option><option value="Anderson/Walter ( CSJ)">Anderson/Walter ( CSJ)</option><option value="Apopka">Apopka</option><option value="Carlos Silva">Carlos Silva</option><option value="Christian">Christian</option><option value="Cristian">Cristian</option><option value="Denner">Denner</option><option value="Emprestado">Emprestado</option><option value="Enoe">Enoe</option><option value="Esteban/Marcelo">Esteban/Marcelo</option><option value="Felipe Resende">Felipe Resende</option><option value="Francisco">Francisco</option><option value="Geral">Geral</option><option value="Joao Felipe Donato">Joao Felipe Donato</option><option value="Jonh">Jonh</option><option value="Jose Saturnino">Jose Saturnino</option><option value="Jose Silva">Jose Silva</option><option value="Juan Carlos">Juan Carlos</option><option value="Karyme">Karyme</option><option value="Luis Castro">Luis Castro</option><option value="Luis Castro 2">Luis Castro 2</option><option value="Luis/ Lucas">Luis/ Lucas</option><option value="Luis/Lucas">Luis/Lucas</option><option value="Maikel">Maikel</option><option value="Manutenção">Manutenção</option><option value="Marcelo">Marcelo</option><option value="Marcelo Baratela">Marcelo Baratela</option><option value="Noel/Marcelo">Noel/Marcelo</option><option value="Pendente">Pendente</option><option value="Ramon">Ramon</option><option value="Renato Fusari">Renato Fusari</option><option value="Rodrigo">Rodrigo</option><option value="Sidney">Sidney</option><option value="Tadeu">Tadeu</option><option value="Walter">Walter</option><option value="Washinton">Washinton</option><option value="Wladimir">Wladimir</option><option value="Yard">Yard</option><option value="Yard Port">Yard Port</option><option value="Yard SC">Yard SC</option><option value="Yard WI">Yard WI</option><option value="Yonjarlin">Yonjarlin</option><option value="Yovani">Yovani</option>
+        </select>
+      </div>
+      <div class="field"><label>Data</label><input id="mv-date" type="text" placeholder="MM/DD/YYYY" value="6/1/2026" fdprocessedid="zr7uw"></div>
+      <div class="field"><label>Responsável</label><input id="mv-resp" type="text" placeholder="Nome" fdprocessedid="ggopca"></div>
+      <div class="field full"><label>Observações</label><textarea id="mv-obs" rows="2" placeholder="Motivo, detalhes..."></textarea></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn secondary" onclick="document.getElementById('modal-bg').classList.remove('open')" fdprocessedid="hby6qh">Cancelar</button>
+      <button class="btn primary" onclick="saveMove()" fdprocessedid="f1ogla">Salvar movimentação</button>
+    </div>
+  </div>
   </div>
 </div>
 
@@ -1779,14 +2332,14 @@ const RAW = {
       "plate": "96FBCV",
       "vin": "7NWB192W7MK010007",
       "driver": "",
-      "team": "Jose Silva",
+      "team": "Felipe Resende",
       "leader": "João Felipe Donato de Sousa",
       "city": "Port Charlotte",
       "state": "FL",
       "obs": "",
       "from": "",
       "due_date": "",
-      "status": "🟠 Em andamento",
+      "status": "✅ Em Dia",
       "done_date": "",
       "year": ""
     },
@@ -5019,6 +5572,15 @@ const RAW = {
       "from_team": "Allan 1",
       "to_team": "Apopka",
       "date": "05/17/2026",
+      "responsible": "",
+      "obs": "",
+      "tipo": "GRANDE"
+    },
+    {
+      "cod": "VAC-003",
+      "from_team": "Jose Silva",
+      "to_team": "Felipe Resende",
+      "date": "6/1/2026",
       "responsible": "",
       "obs": "",
       "tipo": "GRANDE"
@@ -9992,7 +10554,7 @@ buildTeamCheckboxes('');
 renderDashboard();
 </script>
 <div id="drag-ghost"></div>
-<button id="fab-save" onclick="saveAsHTML()" title="Salvar agora para não perder seus dados!" style="display: none;">
+<button id="fab-save" onclick="saveAsHTML()" title="Salvar agora para não perder seus dados!" style="display: flex;" fdprocessedid="z7sbwx">
   💾 SALVAR AGORA
 </button>
 
@@ -10017,4 +10579,4 @@ renderDashboard();
 </div>
 <div id="move-picker-overlay" onclick="closeMovePickerPopup()" style="display:none;position:fixed;inset:0;z-index:499"></div>
 
-</body></html>
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
