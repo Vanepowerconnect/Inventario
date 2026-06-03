@@ -1316,10 +1316,15 @@ function loadData() {
       return parsed;
     }
     const fresh = JSON.parse(JSON.stringify(RAW));
+    if (!fresh.inventory) fresh.inventory = [];
+    if (!fresh.history) fresh.history = [];
     localStorage.setItem(STORAGE_KEY, JSON.stringify(fresh));
     return fresh;
   } catch(e) {
-    return JSON.parse(JSON.stringify(RAW));
+    const d = JSON.parse(JSON.stringify(RAW));
+    if (!d.inventory) d.inventory = [];
+    if (!d.history) d.history = [];
+    return d;
   }
 }
 
@@ -1412,8 +1417,9 @@ function renderDashboard() {
   const pending = assets.filter(a => a.status && a.status.includes('Pendente'));
   
   // Verizon issues from inventory
-  const invTrucks = DB.inventory.filter(i => i.type === 'TRUCK' || i.type === 'TRAILER');
-  const verizonIssues = DB.inventory.filter(i => isIssue(i.verizon) && i.verizon !== undefined);
+  const inventory = DB.inventory || [];
+  const invTrucks = inventory.filter(i => i.type === 'TRUCK' || i.type === 'TRAILER');
+  const verizonIssues = inventory.filter(i => isIssue(i.verizon) && i.verizon !== undefined);
   
   const leaders = [...new Set(assets.map(a => a.leader).filter(l => l && l !== 'Pendente' && l !== 'Drivers' && l !== 'Apopka'))];
   
