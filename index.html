@@ -8873,20 +8873,24 @@ const RAW = {
   ]
 };
 const STORAGE_KEY = 'fleet2026_v10';
+// Corrige automaticamente tipos digitados errado (sem apagar nada). Retorna true se mudou algo.
+function normalizeData(d) {
+  if (!d) return false;
+  const fix = { 'DTCH WITCH': 'DITCH WITCH', 'ESCAVATOR': 'EXCAVATOR', 'FORTLIFT': 'FORKLIFT' };
+  let changed = false;
+  ['assets', 'inventory'].forEach(function(k) {
+    (d[k] || []).forEach(function(o) {
+      if (o.type && fix[o.type]) { o.type = fix[o.type]; changed = true; }
+    });
+  });
+  return changed;
+}
 function loadData() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       const parsed = JSON.parse(saved);
-      // Patch: fix DTCH WITCH typo without losing user data
-      let patched = false;
-      (parsed.assets || []).forEach(function(a) {
-        if (a.type === 'DTCH WITCH') { a.type = 'DITCH WITCH'; patched = true; }
-      });
-      (parsed.inventory || []).forEach(function(i) {
-        if (i.type === 'DTCH WITCH') { i.type = 'DITCH WITCH'; patched = true; }
-      });
-      if (patched) localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
+      if (normalizeData(parsed)) localStorage.setItem(STORAGE_KEY, JSON.stringify(parsed));
       return parsed;
     }
     const fresh = JSON.parse(JSON.stringify(RAW));
@@ -10019,8 +10023,8 @@ function openEditPopup(cod) {
   document.getElementById('ep-title').textContent = isNew ? 'Novo item' : 'Editar — ' + cod;
   document.getElementById('ep-sub').textContent   = isNew ? 'Preencha os dados do novo equipamento' : (asset ? asset.type + ' · ' + asset.model : '');
 
-  const teams   = [...new Set(DB.assets.map(a => a.team).filter(Boolean))].sort();
-  const leaders = [...new Set(DB.assets.map(a => a.leader).filter(Boolean))].sort();
+  const teams   = [...new Set([...DB.assets.map(a => a.team), ...(DB.extraTeams||[])].filter(Boolean))].sort();
+  const leaders = [...new Set([...DB.assets.map(a => a.leader), ...(DB.extraSupervisors||[])].filter(Boolean))].sort();
   const states  = ['FL','GA','IL','IN','MN','NC','NJ','NY','OH','SC','TN','TX','WI'];
   const types   = [...new Set(DB.assets.map(a => a.type).filter(Boolean))].sort();
   const statuses= ['✅ Em Dia','🟠 Em andamento','🟡 Pendente'];
@@ -10057,12 +10061,14 @@ function openEditPopup(cod) {
         <select id="ef-team">
           <option value="">Selecione...</option>
           ${teams.map(t => '<option value="'+esc(t)+'"'+(asset&&asset.team===t?' selected':'')+'>'+esc(t)+'</option>').join('')}
+          <option value="__NEW__">+ Novo team...</option>
         </select>
       </div>
       <div class="edit-field"><label>Supervisor (Crew Leader)</label>
         <select id="ef-leader">
           <option value="">Selecione...</option>
           ${leaders.map(l => '<option value="'+esc(l)+'"'+(asset&&asset.leader===l?' selected':'')+'>'+esc(l)+'</option>').join('')}
+          <option value="__NEW__">+ Novo supervisor...</option>
         </select>
       </div>
       <div class="edit-field"><label>Cidade</label>
@@ -10120,6 +10126,19 @@ function saveEditPopup(cod) {
     typeVal = typeVal.trim().toUpperCase();
   }
 
+  let teamVal = document.getElementById('ef-team').value;
+  if (teamVal === '__NEW__') {
+    teamVal = prompt('Nome da nova equipe/team:');
+    if (!teamVal) return;
+    teamVal = teamVal.trim();
+  }
+  let leaderVal = document.getElementById('ef-leader').value;
+  if (leaderVal === '__NEW__') {
+    leaderVal = prompt('Nome do novo supervisor:');
+    if (!leaderVal) return;
+    leaderVal = leaderVal.trim();
+  }
+
   const fields = {
     cod: newCod, type: typeVal,
     model:  document.getElementById('ef-model').value.trim(),
@@ -10127,8 +10146,8 @@ function saveEditPopup(cod) {
     vin:    document.getElementById('ef-vin').value.trim() || 'FALTA',
     year:   document.getElementById('ef-year') ? document.getElementById('ef-year').value.trim() : '',
     driver: document.getElementById('ef-driver').value.trim(),
-    team:   document.getElementById('ef-team').value,
-    leader: document.getElementById('ef-leader').value,
+    team:   teamVal,
+    leader: leaderVal,
     city:   document.getElementById('ef-city').value.trim(),
     state:  document.getElementById('ef-state').value,
     status: document.getElementById('ef-status').value,
@@ -10180,6 +10199,57 @@ function deleteAsset(cod) {
 function closeEditPopup(e) {
   if (e.target === document.getElementById('edit-popup-bg'))
     document.getElementById('edit-popup-bg').classList.remove('open');
+}
+
+// ===== CADASTROS (Pessoas): adicionar / renomear / remover =====
+function _extraList(kind) {
+  if (kind === 'team')       { DB.extraTeams = DB.extraTeams || []; return DB.extraTeams; }
+  if (kind === 'supervisor') { DB.extraSupervisors = DB.extraSupervisors || []; return DB.extraSupervisors; }
+  DB.extraDrivers = DB.extraDrivers || []; return DB.extraDrivers;
+}
+function _fieldOf(kind) { return kind === 'team' ? 'team' : (kind === 'supervisor' ? 'leader' : 'driver'); }
+function _labelOf(kind) { return kind === 'team' ? 'equipe/team' : (kind === 'supervisor' ? 'supervisor' : 'driver'); }
+
+function openAddPerson(kind) {
+  var nome = prompt('Nome do novo ' + _labelOf(kind) + ':');
+  if (nome === null) return;
+  nome = nome.trim();
+  if (!nome) return;
+  var field = _fieldOf(kind);
+  var existe = DB.assets.some(function(a){ return (a[field]||'') === nome; }) || _extraList(kind).indexOf(nome) >= 0;
+  if (existe) { alert('"' + nome + '" já existe.'); return; }
+  _extraList(kind).push(nome);
+  saveData();
+  renderPessoas();
+  alert('✅ ' + _labelOf(kind) + ' "' + nome + '" adicionado. Já aparece na lista ao cadastrar/editar um equipamento.');
+}
+
+function editPerson(kind, oldName) {
+  var novo = prompt('Renomear "' + oldName + '" para:', oldName);
+  if (novo === null) return;
+  novo = novo.trim();
+  if (!novo || novo === oldName) return;
+  var field = _fieldOf(kind), n = 0;
+  DB.assets.forEach(function(a){ if ((a[field]||'') === oldName) { a[field] = novo; n++; } });
+  var ex = _extraList(kind), i = ex.indexOf(oldName); if (i >= 0) ex[i] = novo;
+  saveData();
+  renderPessoas(); rerenderAll();
+  alert('✅ Renomeado para "' + novo + '" (' + n + ' equipamento(s) atualizado(s)).');
+}
+
+function deletePerson(kind, name) {
+  var field = _fieldOf(kind);
+  var n = DB.assets.filter(function(a){ return (a[field]||'') === name; }).length;
+  if (n > 0) {
+    if (!confirm('"' + name + '" está em ' + n + ' equipamento(s). Remover vai deixar esses equipamentos SEM ' + _labelOf(kind) + ' (em branco). Continuar?')) return;
+    DB.assets.forEach(function(a){ if ((a[field]||'') === name) a[field] = ''; });
+  } else {
+    if (!confirm('Remover "' + name + '"?')) return;
+  }
+  var ex = _extraList(kind), i = ex.indexOf(name); if (i >= 0) ex.splice(i, 1);
+  saveData();
+  renderPessoas(); rerenderAll();
+  alert('🗑 "' + name + '" removido.');
 }
 
 // BACKUP & RESTORE
@@ -10520,7 +10590,7 @@ function renderCadastros() {
 
 function renderPessoas() {
   // Supervisors
-  const supervisors = [...new Set(DB.assets.map(a => a.leader).filter(Boolean))].sort();
+  const supervisors = [...new Set([...DB.assets.map(a => a.leader), ...(DB.extraSupervisors||[])].filter(Boolean))].sort();
   const supList = document.getElementById('supervisor-list');
   if (supList) {
     supList.innerHTML = '';
@@ -10543,7 +10613,7 @@ function renderPessoas() {
   }
 
   // Teams
-  const teams = [...new Set(DB.assets.map(a => a.team).filter(Boolean))].sort();
+  const teams = [...new Set([...DB.assets.map(a => a.team), ...(DB.extraTeams||[])].filter(Boolean))].sort();
   const teamList = document.getElementById('team-list');
   if (teamList) {
     teamList.innerHTML = '';
@@ -10568,7 +10638,7 @@ function renderPessoas() {
   }
 
   // Drivers
-  const drivers = [...new Set(DB.assets.map(a => a.driver).filter(Boolean).filter(d => d !== 'N/A' && d !== ''))].sort();
+  const drivers = [...new Set([...DB.assets.map(a => a.driver), ...(DB.extraDrivers||[])].filter(Boolean).filter(d => d !== 'N/A' && d !== ''))].sort();
   const driverList = document.getElementById('driver-list');
   if (driverList) {
     driverList.innerHTML = '';
@@ -10649,9 +10719,11 @@ async function cloudPull(opts) {
     _cloudSnapshot = _deepClone(DB);
   } else if (!cloudEmpty) {
     DB.assets = data.assets || []; DB.inventory = data.inventory || []; DB.history = data.history || [];
+    _cloudSnapshot = _deepClone(DB);            // snapshot = nuvem como veio
+    var _fixed = normalizeData(DB);             // corrige typos localmente
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(DB)); } catch (e) {}
-    _cloudSnapshot = _deepClone(DB);
     rerenderAll();
+    if (_fixed && _cloudOn) cloudPush();        // empurra a correção pra nuvem
   } else {
     _cloudSnapshot = _deepClone(DB);
   }
@@ -10686,7 +10758,9 @@ function showLoginGate() {
     try {
       const r = await cloudPull({ seedIfEmpty: true });
       if (r && r.ok) {
-        _cloudOn = true; _cloudStatus = 'ok'; updateSaveIndicator();
+        _cloudOn = true; _cloudStatus = 'ok';
+        cloudPush();   // empurra correções automáticas (ex: typos) feitas na carga
+        updateSaveIndicator();
         ov.remove();
       } else if (r && r.error === 'senha_invalida') {
         err.textContent = 'Senha incorreta.'; btn.disabled = false; btn.textContent = 'Entrar';
