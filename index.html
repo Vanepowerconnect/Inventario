@@ -9380,8 +9380,15 @@ function renderTeams() {
     const geralBadge = t.geral.length > 0
       ? ' <span style="font-size:10px;background:var(--blue3);color:var(--blue);padding:1px 6px;border-radius:10px;font-weight:500">+Geral</span>'
       : '';
+    const manutCount = t.allAssets.filter(function(a) {
+      const inv = (DB.inventory || []).find(function(i){ return i.cod === a.cod; });
+      return inv && inv.manutencao && inv.manutencao.trim() !== '';
+    }).length;
+    const manutBadge = manutCount > 0
+      ? ' <span title="' + manutCount + ' em manutencao" style="font-size:10px;background:#fef3c7;color:#d97706;padding:1px 6px;border-radius:10px;font-weight:600;border:1px solid #fcd34d">\u{1F527} ' + manutCount + '</span>'
+      : '';
     return '<div class="team-card" onclick="openTeamPopup(\'' + esc(t.team) + '\')">'
-      + '<div class="team-card-name">' + esc(t.team) + geralBadge + '</div>'
+      + '<div class="team-card-name">' + esc(t.team) + geralBadge + manutBadge + '</div>'
       + '<div class="team-card-leader">Supervisor: <span>' + esc(t.leader) + '</span></div>'
       + '<div class="team-card-pills">'
       + Object.entries(types).map(function(e){ return '<span class="asset-pill">' + e[0] + ': ' + e[1] + '</span>'; }).join('')
@@ -9457,6 +9464,7 @@ function openTeamPopup(teamName, leaderName) {
       +   '</div>'
       + '</div>'
       + statusBadge(a.status)
+      + (function(){ const inv=(DB.inventory||[]).find(function(i){return i.cod===a.cod;}); return (inv&&inv.manutencao&&inv.manutencao.trim()!=='') ? '<span title="'+inv.manutencao+'" style="font-size:10px;background:#fef3c7;color:#d97706;padding:2px 6px;border-radius:6px;font-weight:600;border:1px solid #fcd34d;flex-shrink:0">🔧</span>' : ''; })()
       + '<select onclick="event.stopPropagation()" style="font-size:11px;padding:3px 7px;border-radius:6px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;outline:none;flex-shrink:0">'
       +   '<option value="✅ Em Dia" '       + selOk   + '>✅ Em Dia</option>'
       +   '<option value="🟠 Em andamento" ' + selWarn + '>🟠 Andamento</option>'
